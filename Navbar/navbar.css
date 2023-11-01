@@ -1,0 +1,53 @@
+:root{
+    --black: black;
+    --green: green;
+    --white: white;
+    --gris: rgb(185, 185, 185);
+    --fondo: rgb(51, 55, 72);
+}
+nav {
+    height: 35px;
+    width: fit-content;
+    background-color: var(--fondo);
+    
+}
+.titulo{
+    font-size: 20px;
+    align-items: center;
+    font-weight: bold;
+}
+.desplegable{
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+}
+.desabilitado{
+    background-color: transparent;
+    border: none;
+    color: var(--gris);
+}
+nav > ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 2px;
+}
+
+nav > ul > li{
+    margin: 4px;
+    color: var(--white);
+}
+nav > ul > li > a{
+    text-decoration: none;
+    color: var(--white);
+}
+.boton:hover{
+    background-color: var(--green);
+    color: var(--white);
+}
+.boton{
+    background-color: transparent;
+    color: var(--green);
+    border-color: var(--green);
+    border-style: solid;
+}
