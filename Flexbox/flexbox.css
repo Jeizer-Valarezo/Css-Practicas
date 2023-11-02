@@ -1,0 +1,46 @@
+body, html{
+    height: 100%;
+    margin: 0;
+}
+.sidebar{
+    width: 200px;
+    height: 100%;
+    background-color: rgb(247, 106, 106);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    padding: 20px;
+}
+.navegacion > ul{
+    list-style-type:none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.navegacion > ul > li{
+    padding: 10px;
+}
+.navegacion > ul > li > a {
+    text-decoration: none;
+    color: #2b2b2b;
+}
+
+.navegacion > ul > li > a:hover {
+    color: #2b2bb2;
+    transition: 0.3s;
+}
+
+.avatar-section {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
