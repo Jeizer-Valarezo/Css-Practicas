@@ -1,0 +1,41 @@
+section.calculadora{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    column-span: all;
+    border-radius: 10%;
+    overflow: hidden;
+    max-width: 30ch;
+    height: 30ch;
+}
+.output{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: rgb(107, 106, 115);
+    grid-column: 1/span 4;
+    color: white;
+    padding-right: 10px;
+}
+div{
+    display: grid;
+}
+.igual{
+    grid-column: 4;
+    grid-row: 3/span 4;
+}
+.ig{
+   background-color: rgb(255, 118, 118); 
+}
+.op{
+    background-color: rgb(198, 198, 198);
+}
+.boton{
+    border: solid 1px gray;
+    
+}
+.boton:hover{
+    border: solid 1px black;
+    background-color: gray;
+    color:white;
+}
