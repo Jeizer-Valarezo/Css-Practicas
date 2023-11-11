@@ -1,0 +1,75 @@
+.contenedor{
+    width: 30%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas:
+    "imgCap"
+    "imgCap"
+    "imgCap"
+    "texto"
+    "texto"
+    "item1"
+    "item2"
+    "item3"
+    "links";
+    margin: 1;
+}
+.texto,
+.item1, .item2, .item3, .links{
+    background-color: aqua;
+    padding: 1ch;
+}
+.img1{
+    grid-area: img1;
+	max-height: 300px;
+	object-fit: contain;
+	
+}
+.contenedor .imgCap{
+    background-color: black;
+    grid-area: imgCap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .texto{
+    grid-area: texto;
+}
+.contenedor .item1{
+    grid-area: item1;
+}
+.contenedor .item2{
+    grid-area: item2;
+}
+.contenedor .item3{
+    grid-area: item3;
+}
+.contenedor .links{
+    grid-area: links;
+}
+.contenedor .links > ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    
+}
+.contenedor .links > ul > li{
+    padding-right: 2ch;
+}
+
+
+div{
+    border: solid 1px black;
+    
+}
+@media (max-width: 900px) {
+    .contenedor{
+        width: 100%;
+    }
+    .img1 {
+		max-height: initial;
+		width: 100%;
+	}
+}
