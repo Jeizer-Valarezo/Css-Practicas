@@ -1,0 +1,142 @@
+:root{
+    --circleColor:#ffffff;
+    --circleSize:50px;
+    --circleRadio:calc(var(--circleSize)/2);
+    --background: linear-gradient(gray, white);
+    --borderRadio:5%;
+}
+
+.contenedor{
+    display: grid;
+    gap: 15px ;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "tarjeta1 tarjeta2 tarjeta3";
+    
+}
+.nombre{
+    display: flex;
+    align-items: end;
+    grid-area: nombre;
+}
+.fecha{
+    grid-area: fecha;
+}
+.fechaStyle{
+    color: var(--circleColor);
+    border-style: none;
+    background-color: transparent;
+}
+.dropdown{
+    display: flex;
+    
+    align-items: center;
+    justify-content: end;
+    flex-grow: 1;
+    grid-area: dropdown;
+}
+
+
+
+.imagen{
+    display: flex;
+    flex-shrink: 1;
+    flex-basis: content;
+    height: fit-content;
+    max-width: 100%;
+    
+}
+
+#negrita{
+    font-weight: bold;
+}
+.presentacion{
+    grid-area: presentacion;
+    padding: 1%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr; 
+    grid-template-areas:    "circulo nombre dropdown"
+                            "circulo fecha dropdown";
+}
+.foto{
+    grid-area: foto;
+}
+.icon{
+    width: 20px;
+}
+.iconos{
+    
+    padding-left: 2ch;
+    max-height: 20px;
+    grid-area: iconos;
+}
+.descripcion{
+    grid-area: descripcion;
+}
+.texto{
+    text-align: justify;
+    padding: 1%;
+    
+}
+.circulo{
+    grid-area: circulo;
+    background-color: var(--circleColor);
+    height: var(--circleSize);
+    width: var(--circleSize);
+    border-radius: var(--circleRadio);
+}
+.tarjeta1{
+    
+    background: var(--background);
+    border-radius: var(--borderRadio);
+    grid-area: tarjeta1;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr); 
+    grid-template-areas:    "presentacion"
+                            "foto"
+                            "iconos"
+                            "descripcion";
+}
+.tarjeta2{
+    background: var(--background);
+    border-radius: var(--borderRadio);
+    grid-area: tarjeta2;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr); 
+    grid-template-areas:    "presentacion"
+                            "foto"
+                            "iconos"
+                            "descripcion";
+}
+.tarjeta3{
+    background: var(--background);
+    border-radius: var(--borderRadio);
+    grid-area: tarjeta3;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr); 
+    grid-template-areas:    "presentacion"
+                            "foto"
+                            "iconos"
+                            "descripcion";
+}
+
+
+
+@media(max-width: 768px){
+    .contenedor{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:    "tarjeta1 tarjeta2"
+                                "tarjeta3 ...";
+    }
+}
+@media(max-width: 375px){
+    .contenedor{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:    "tarjeta1"
+                                "tarjeta2"
+                                "tarjeta3";
+    }
+}
