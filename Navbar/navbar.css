@@ -7,9 +7,18 @@
 }
 nav {
     height: 35px;
-    width: fit-content;
+    width: 100%;
     background-color: var(--fondo);
     
+    
+}
+nav > ul{
+    display: flex;
+    overflow: hidden;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
 }
 .titulo{
     font-size: 20px;
@@ -26,12 +35,7 @@ nav {
     border: none;
     color: var(--gris);
 }
-nav > ul{
-    display: flex;
-    list-style: none;
-    align-items: center;
-    padding: 2px;
-}
+
 
 nav > ul > li{
     margin: 4px;
@@ -51,3 +55,5 @@ nav > ul > li > a{
     border-color: var(--green);
     border-style: solid;
 }
+
+
